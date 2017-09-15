@@ -6,7 +6,7 @@ This template allocates a virtual machine instance and provisions Apache Tomcat 
 
 In Schematics create variables `softlayer_username`, `softlayer_api_key`, `ssh_key`.
 
-If you want to be able to SSH into the virtual machine provide a value for `ssh_key`
+The file `/root/tomcat` has the associated credentials & access information.
 
 ## Variables
 
