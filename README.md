@@ -36,7 +36,7 @@ Environments can be used to separate software components into development tiers 
 |private_network_only|When set to `true`, a compute instance only has access to the private network.|false|
 |softlayer_api_key|Your Bluemix Infrastructure (SoftLayer) API key.| |
 |softlayer_username|Your Bluemix Infrastructure (SoftLayer) user name.||
-|ssh_key|our public SSH key to use for access to virtual machine.||
+|ssh_key|Your public SSH key to use for access to virtual machine.||
 |ssh_label|An identifying label to assign to the SSH key.|public ssh key - Schematics VM|
 |ssh_notes|Notes to store with the SSH key.||
 |ssh_user|The provisioning user name.|root|
