@@ -4,13 +4,13 @@ An [IBM Cloud Schematics](https://console.bluemix.net/docs/services/schematics/i
 
 Schematics uses [Terraform](https://www.terraform.io/) as the infrastructure as code engine. With this template, you can provision and manage infrastructure as a single unit.
 
-See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resource for the IBM cloud.
+See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resources for the IBM Cloud.
 
 ## Create an environment with this template
 
 Environments can be used to separate software components into development tiers (e.g. staging, QA, and production).
 
-1. In Bluemix, go to the menu and select the [Schematics dashboard](https://console.bluemix.net/schematics).
+1. In IBM Cloud, go to the menu and select the [Schematics dashboard](https://console.bluemix.net/schematics).
 2. In the left navigation menu, select **Templates** to access the template catalog.
 3. Click **Create** on the Tomcat7 template. You are taken to a configuration page where you can define metadata about your environment. 
 4. In the **Variables** section:
@@ -34,9 +34,9 @@ Environments can be used to separate software components into development tiers 
 |network_speed|The connection speed (in Mbps) for the instance’s network components.|100|
 |os_reference_code|An operating system reference code that is used to provision the computing instance. [Get a complete list of the OS reference codes available](https://api.softlayer.com/rest/v3/SoftLayer_Virtual_Guest_Block_Device_Template_Group/getVhdImportSoftwareDescriptions.json?objectMask=referenceCode) (use your API key as the password to log in).|CENTOS_7|
 |private_network_only|When set to `true`, a compute instance only has access to the private network.|false|
-|softlayer_api_key|Your Bluemix Infrastructure (SoftLayer) API key.| |
-|softlayer_username|Your Bluemix Infrastructure (SoftLayer) user name.||
-|ssh_key|our public SSH key to use for access to virtual machine.||
+|softlayer_api_key|Your IBM Cloud Infrastructure (SoftLayer) API key.| |
+|softlayer_username|Your IBM Cloud Infrastructure (SoftLayer) user name.||
+|ssh_key|Your public SSH key to use for access to virtual machine.||
 |ssh_label|An identifying label to assign to the SSH key.|public ssh key - Schematics VM|
 |ssh_notes|Notes to store with the SSH key.||
 |ssh_user|The provisioning user name.|root|
