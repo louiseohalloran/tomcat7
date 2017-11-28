@@ -104,7 +104,15 @@ resource "ibm_compute_vm_instance" "vm" {
   ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}"]
   tags                     = ["${var.tags}"]
   user_metadata            = "${file("install.yml")}"
-	}	
+	
+  connection {
+  user        = "armada"
+  private_key = "${var.temp_private_key}"
+  }
+	
+	
+	
+}	
   
 
 
