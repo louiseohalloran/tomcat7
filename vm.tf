@@ -105,17 +105,7 @@ resource "ibm_compute_vm_instance" "vm" {
   tags                     = ["${var.tags}"]
   user_metadata            = "${file("install.yml")}"
 	}	
-  connection {
-  user        = "armada"
-  private_key = "${var.temp_private_key}"
-  }
   
-  # Create the installation script
-  provisioner "file" {
-  source      = "${var.install_script}"
-  destination = "/tmp/installation.sh"
-	  
-	  }	  
 
 
 output "public_ip" {
