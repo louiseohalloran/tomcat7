@@ -115,7 +115,7 @@ resource "ibm_compute_vm_instance" "vm" {
   source      = "${var.install_script}"
   destination = "/tmp/installation.sh"
 	  
-	  
+	  }	  
 }
 
 output "public_ip" {
