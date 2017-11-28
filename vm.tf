@@ -109,7 +109,12 @@ resource "ibm_compute_vm_instance" "vm" {
   user        = "armada"
   private_key = "${var.temp_private_key}"
   }
-	
+
+  provisioner "file" {
+  source      = "${var.install_script}"
+  destination = "/tmp/installation.sh"
+	  
+  }	
 	
 	
 }	
