@@ -69,18 +69,6 @@ variable "ssh_key" {
   default = ""
   description = "The public key material to use in the SSH keypair."
 }
-variable temp_public_key {
-    default = ""
-    description = "The temporary private key for the SSH key pair to use for provisioning."
-}
-variable temp_private_key {
-    default = ""
-    description = "The temporary public key of the SSH key pair to use for provisioning."
-}
-variable "install_script" {
-  default = "install.yml"
-  description = "The relative location of the install script."
-}
 
 resource "ibm_compute_ssh_key" "ssh_key" {
     label = "${var.ssh_label}"
@@ -104,22 +92,7 @@ resource "ibm_compute_vm_instance" "vm" {
   ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}"]
   tags                     = ["${var.tags}"]
   user_metadata            = "${file("install.yml")}"
-	
-  connection {
-  user        = "armada"
-  private_key = "${var.temp_private_key}"
-  }
-
-  provisioner "file" {
-  source      = "${var.install_script}"
-  destination = "/tmp/installation.sh"
-	  
-  }	
-	
-	
-}	
-  
-
+}
 
 output "public_ip" {
 	value = "http://${ibm_compute_vm_instance.vm.ipv4_address}"
