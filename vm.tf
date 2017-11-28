@@ -113,7 +113,7 @@ resource "ibm_compute_vm_instance" "vm" {
   # Create the installation script
   provisioner "file" {
   source      = "${var.install_script}"
-  destination = "installation.sh"
+  destination = "/tmp/installation.sh"
 	  
 	  
 }
